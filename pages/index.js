@@ -7,6 +7,14 @@ import { BsSearch } from 'react-icons/bs';
 import Weather from "@/components/weather";
 import spinning from '../public/spinning.gif'
 
+axios.get('https://api.example.com/data')
+  .then(response => {
+    console.log(response.data);
+  })
+  .catch(error => {
+    console.error('There was an error fetching the data!', error);
+  });
+
 
 const inter = Inter({ subsets: ["latin"] });
 
